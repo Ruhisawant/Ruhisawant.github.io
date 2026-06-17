@@ -5,9 +5,7 @@ import { LogoMenuBar } from "./LogoMenuBar";
 const pictures = [
   "about-me-cover",
   "about-me",
-  "marketing-projects",
   "coding-projects",
-  "skills",
   "contact-me",
 ];
 
@@ -58,10 +56,14 @@ export const PageNavigation = () => {
   return (
     <main className="pointer-events-none select-none z-10 fixed inset-0 flex justify-between flex-col">
       {/* Logo */}
-      <LogoMenuBar />
+      {/* <LogoMenuBar /> */}
+      
+      <div className="pointer-events-auto mt-10 ml-10 w-20 h-20 overflow-hidden">
+        <img className="w-full h-full object-cover" src="/background/logo.png" alt="Logo" />
+      </div>
 
       {/* Page Navigation Buttons */}
-      <div className="w-full overflow-auto pointer-events-auto flex justify-center">
+      <div className="mt-auto w-full overflow-auto pointer-events-auto flex justify-center">
         <div className="overflow-auto flex items-center gap-4 max-w-full p-10">
           {/* Render button for each page */}
           {pages.map((_, index) => (

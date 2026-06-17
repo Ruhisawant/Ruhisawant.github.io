@@ -33,7 +33,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return <div className="text-white text-center py-20">Error loading 3D content</div>;
+      return <div className="text-white text-center py-20">Error loading content</div>;
     }
     return this.props.children;
   }
@@ -59,7 +59,7 @@ function App() {
       {isBookRoute ? (
         <>
           <PageNavigation />
-          <PageBubbles />
+          {/* <PageBubbles /> */}
           <Loader />
           <ErrorBoundary>
             <Canvas shadows="percentage" camera={{ position: [-0.5, 1, window.innerWidth > 800 ? 4 : 9], fov: 45 }}>
@@ -73,10 +73,10 @@ function App() {
         </>
       ) : (
         <>
-          <main className="fixed inset-0 z-20 pointer-events-none select-none flex justify-between flex-col">
+          {/* <main className="fixed inset-0 z-20 pointer-events-none select-none flex justify-between flex-col">
             <LogoMenuBar />
           </main>
-          <StaticContentPage route={route} />
+          <StaticContentPage route={route} /> */}
         </>
       )}
     </>
